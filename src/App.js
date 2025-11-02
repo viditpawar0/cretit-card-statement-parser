@@ -1,7 +1,6 @@
 import './App.css';
 import { useState } from 'react';
 import StatementDetails from './components/StatementDetails';
-import * as pdfjsLib from 'pdfjs-dist';
 import PdfCoordinates from './utils/PdfCoordinates';
 import PdfParser from './utils/PdfParser';
 import { WorkerMessageHandler } from "pdfjs-dist/build/pdf.worker.min.mjs";

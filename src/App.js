@@ -4,7 +4,7 @@ import StatementDetails from './components/StatementDetails';
 import PdfCoordinates from './utils/PdfCoordinates';
 import PdfParser from './utils/PdfParser';
 import * as pdfjs from 'pdfjs-dist/build/pdf';
-import { WorkerMessageHandler } from "pdfjs-dist/build/pdf.worker.mjs";
+import { WorkerMessageHandler } from "pdfjs-dist/build/pdf.worker";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   WorkerMessageHandler,

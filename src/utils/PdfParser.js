@@ -9,16 +9,12 @@ export default class PdfParser {
         }
     }
 
-    #pdfFile;
-    #pdfPassword;
     #textContent;
 
     static async newParser(pdfFile, pdfPassword) {
         PdfParser.#allowCreation = true;
         const parser = new PdfParser();
         PdfParser.#allowCreation = false;
-        parser.#pdfFile = pdfFile;
-        parser.#pdfPassword = pdfPassword;
         const arrayBuffer = await pdfFile.arrayBuffer();
         const pdf = await pdfjsLib.getDocument({ data: arrayBuffer, password: pdfPassword }).promise;
         const page = await pdf.getPage(1);
